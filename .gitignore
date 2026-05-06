@@ -23,6 +23,11 @@ build/
 # Temp audio files
 backend/temp_audio.*
 backend/output.mp3
+*.wav
+*.mp3
+*.mp4
+*.webm
+*.ogg
 
 # OS
 .DS_Store
@@ -42,3 +47,12 @@ npm-debug.log*
 # Node (just in case)
 node_modules/
 package-lock.json
+
+# Git
+*.orig
+*.rej
+
+# Backup files
+*.bak
+*.backup
+*~

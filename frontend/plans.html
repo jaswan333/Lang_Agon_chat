@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plans & Pricing — VoiceAI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">🎤</div><span class="logo-text">VoiceAI</span>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Languages</div>
+      <a href="english.html" class="nav-item"><span class="nav-icon">🇬🇧</span><span class="nav-label">English</span><span class="nav-tag">EN</span></a>
+      <a href="tamil.html" class="nav-item"><span class="nav-icon">🇮🇳</span><span class="nav-label">Tamil</span><span class="nav-tag">TA</span></a>
+      <a href="hindi.html" class="nav-item"><span class="nav-icon">🇮🇳</span><span class="nav-label">Hindi</span><span class="nav-tag">HI</span></a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">More</div>
+      <a href="plans.html" class="nav-item active"><span class="nav-icon">💎</span><span class="nav-label">Plans & Pricing</span></a>
+      <a href="help.html" class="nav-item"><span class="nav-icon">❓</span><span class="nav-label">Help & Guide</span></a>
+      <a href="contact.html" class="nav-item"><span class="nav-icon">📞</span><span class="nav-label">Contact Us</span></a>
+    </nav>
+    <div class="sidebar-footer"><div class="status-dot"></div><span>AI Server Online</span></div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <button class="hamburger" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
+      <h1 class="page-title">Plans & Pricing</h1>
+      <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <div class="help-content">
+      <div class="help-hero">
+        <div class="help-hero-icon">💎</div>
+        <h2>Choose Your Plan</h2>
+        <p>Start free, upgrade when you need more power.</p>
+      </div>
+
+      <div class="plans-grid">
+
+        <!-- Free -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <div class="plan-badge free-badge">FREE</div>
+            <div class="plan-name">Basic</div>
+            <div class="plan-price">₹0<span>/month</span></div>
+            <div class="plan-desc">Perfect to get started</div>
+          </div>
+          <ul class="plan-features">
+            <li class="feat-yes">✅ 3 languages (EN, TA, HI)</li>
+            <li class="feat-yes">✅ Voice input & output</li>
+            <li class="feat-yes">✅ 20 messages/day</li>
+            <li class="feat-yes">✅ Auto silence detection</li>
+            <li class="feat-no">❌ Keyboard text input</li>
+            <li class="feat-no">❌ Chat history export</li>
+            <li class="feat-no">❌ Priority response speed</li>
+            <li class="feat-ads">📢 Includes ads</li>
+          </ul>
+          <a href="english.html" class="plan-btn plan-btn-outline">Get Started Free</a>
+        </div>
+
+        <!-- Standard -->
+        <div class="plan-card plan-popular">
+          <div class="popular-tag">Most Popular</div>
+          <div class="plan-header">
+            <div class="plan-badge standard-badge">STANDARD</div>
+            <div class="plan-name">Standard</div>
+            <div class="plan-price">₹299<span>/month</span></div>
+            <div class="plan-desc">For regular users</div>
+          </div>
+          <ul class="plan-features">
+            <li class="feat-yes">✅ 3 languages (EN, TA, HI)</li>
+            <li class="feat-yes">✅ Voice input & output</li>
+            <li class="feat-yes">✅ 200 messages/day</li>
+            <li class="feat-yes">✅ Auto silence detection</li>
+            <li class="feat-yes">✅ Keyboard text input</li>
+            <li class="feat-yes">✅ Waveform visualizer</li>
+            <li class="feat-no">❌ Chat history export</li>
+            <li class="feat-ads">📢 Minimal ads</li>
+          </ul>
+          <a href="contact.html" class="plan-btn plan-btn-primary">Get Standard</a>
+        </div>
+
+        <!-- Premium -->
+        <div class="plan-card">
+          <div class="plan-header">
+            <div class="plan-badge premium-badge">PREMIUM</div>
+            <div class="plan-name">Premium</div>
+            <div class="plan-price">₹699<span>/month</span></div>
+            <div class="plan-desc">For power users & teams</div>
+          </div>
+          <ul class="plan-features">
+            <li class="feat-yes">✅ 3 languages (EN, TA, HI)</li>
+            <li class="feat-yes">✅ Voice input & output</li>
+            <li class="feat-yes">✅ Unlimited messages</li>
+            <li class="feat-yes">✅ Auto silence detection</li>
+            <li class="feat-yes">✅ Keyboard text input</li>
+            <li class="feat-yes">✅ Waveform visualizer</li>
+            <li class="feat-yes">✅ Chat history export</li>
+            <li class="feat-yes">✅ Priority response speed</li>
+            <li class="feat-yes">🚫 No ads</li>
+          </ul>
+          <a href="contact.html" class="plan-btn plan-btn-premium">Get Premium</a>
+        </div>
+
+      </div>
+
+      <div class="plans-note">
+        All plans include access to Groq LLaMA 3.3 AI and Whisper speech recognition.
+        Contact us to upgrade: <a href="contact.html">contact page</a> or call <strong>+91 93429 84498</strong>.
+      </div>
+    </div>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

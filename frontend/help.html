@@ -10,49 +10,30 @@
 <div class="app-shell">
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-logo">
-      <div class="logo-icon">🎤</div>
-      <span class="logo-text">VoiceAI</span>
+      <div class="logo-icon">🎤</div><span class="logo-text">VoiceAI</span>
     </div>
     <nav class="sidebar-nav">
       <div class="nav-section-label">Languages</div>
-      <a href="english.html" class="nav-item">
-        <span class="nav-icon">🇬🇧</span>
-        <span class="nav-label">English</span>
-        <span class="nav-tag">EN</span>
-      </a>
-      <a href="tamil.html" class="nav-item">
-        <span class="nav-icon">🇮🇳</span>
-        <span class="nav-label">Tamil</span>
-        <span class="nav-tag">TA</span>
-      </a>
-      <a href="hindi.html" class="nav-item">
-        <span class="nav-icon">🇮🇳</span>
-        <span class="nav-label">Hindi</span>
-        <span class="nav-tag">HI</span>
-      </a>
+      <a href="english.html" class="nav-item"><span class="nav-icon">🇬🇧</span><span class="nav-label">English</span><span class="nav-tag">EN</span></a>
+      <a href="tamil.html" class="nav-item"><span class="nav-icon">🇮🇳</span><span class="nav-label">Tamil</span><span class="nav-tag">TA</span></a>
+      <a href="hindi.html" class="nav-item"><span class="nav-icon">🇮🇳</span><span class="nav-label">Hindi</span><span class="nav-tag">HI</span></a>
       <div class="nav-divider"></div>
-      <div class="nav-section-label">Support</div>
-      <a href="help.html" class="nav-item active">
-        <span class="nav-icon">❓</span>
-        <span class="nav-label">Help & Guide</span>
-      </a>
+      <div class="nav-section-label">More</div>
+      <a href="plans.html" class="nav-item"><span class="nav-icon">💎</span><span class="nav-label">Plans & Pricing</span></a>
+      <a href="help.html" class="nav-item active"><span class="nav-icon">❓</span><span class="nav-label">Help & Guide</span></a>
+      <a href="contact.html" class="nav-item"><span class="nav-icon">📞</span><span class="nav-label">Contact Us</span></a>
     </nav>
-    <div class="sidebar-footer">
-      <div class="status-dot"></div>
-      <span>AI Server Online</span>
-    </div>
+    <div class="sidebar-footer"><div class="status-dot"></div><span>AI Server Online</span></div>
   </aside>
 
   <main class="main-content">
     <header class="topbar">
-      <button class="hamburger" onclick="toggleSidebar()">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hamburger" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
       <h1 class="page-title">Help & Guide</h1>
+      <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">🌙</button>
     </header>
 
     <div class="help-content">
-
       <div class="help-hero">
         <div class="help-hero-icon">📖</div>
         <h2>How to use VoiceAI</h2>
@@ -62,83 +43,52 @@
       <div class="help-steps">
         <div class="step-card">
           <div class="step-num">1</div>
-          <div class="step-body">
-            <h4>Choose a Language</h4>
-            <p>Select English, Tamil, or Hindi from the sidebar on the left to open that language's chat page.</p>
-          </div>
+          <div class="step-body"><h4>Choose a Language</h4><p>Select English, Tamil, or Hindi from the sidebar to open that language's chat page.</p></div>
         </div>
         <div class="step-card">
           <div class="step-num">2</div>
-          <div class="step-body">
-            <h4>Allow Microphone</h4>
-            <p>When prompted by your browser, click <strong>Allow</strong> to grant microphone access. This is required for voice input.</p>
-          </div>
+          <div class="step-body"><h4>Allow Microphone</h4><p>Click <strong>Allow</strong> when your browser asks for microphone permission.</p></div>
         </div>
         <div class="step-card">
           <div class="step-num">3</div>
-          <div class="step-body">
-            <h4>Click the Mic Button</h4>
-            <p>Press the blue microphone button. It will turn red and start recording for <strong>4 seconds</strong>. Speak clearly during this time.</p>
-          </div>
+          <div class="step-body"><h4>Click Mic or Type</h4><p>Press the mic button and speak — recording stops automatically when you go silent, or click the red stop button for instant control. On English, you can also type your question.</p></div>
         </div>
         <div class="step-card">
           <div class="step-num">4</div>
-          <div class="step-body">
-            <h4>Wait for AI Response</h4>
-            <p>After recording, the AI processes your speech and replies in text and voice automatically. The response plays in your selected language.</p>
-          </div>
+          <div class="step-body"><h4>Hear the Response</h4><p>AI replies in text and voice in your selected language. The waveform shows your mic is active.</p></div>
         </div>
+      </div>
+
+      <div class="help-section-title">New Features</div>
+      <div class="tech-grid">
+        <div class="tech-card"><div class="tech-icon">🔇</div><div class="tech-name">Auto Silence Detection</div><div class="tech-desc">Recording stops automatically when you stop speaking. No need to wait for a fixed timer.</div></div>
+        <div class="tech-card"><div class="tech-icon">〰️</div><div class="tech-name">Live Waveform</div><div class="tech-desc">Animated audio waveform shows your microphone is active and picking up your voice.</div></div>
+        <div class="tech-card"><div class="tech-icon">🎙️</div><div class="tech-name">Transcription Display</div><div class="tech-desc">See exactly what Whisper heard below each AI response to verify accuracy.</div></div>
+        <div class="tech-card"><div class="tech-icon">⌨️</div><div class="tech-name">Keyboard Input</div><div class="tech-desc">English chat supports typing. Press Enter or click Send. Voice output still plays automatically.</div></div>
+        <div class="tech-card"><div class="tech-icon">🌙</div><div class="tech-name">Dark / Light Theme</div><div class="tech-desc">Toggle between dark and light mode using the moon/sun button in the top-right corner.</div></div>
+        <div class="tech-card"><div class="tech-icon">⌨️</div><div class="tech-name">Space Shortcut</div><div class="tech-desc">Press the Space bar to start recording without clicking the mic button.</div></div>
+        <div class="tech-card"><div class="tech-icon">🔇</div><div class="tech-name">Improved Silence Detection</div><div class="tech-desc">Faster and more accurate silence detection with reduced delay (1.2s) and better threshold tuning.</div></div>
       </div>
 
       <div class="help-section-title">Tech Stack</div>
       <div class="tech-grid">
-        <div class="tech-card">
-          <div class="tech-icon">🎙️</div>
-          <div class="tech-name">Whisper STT</div>
-          <div class="tech-desc">OpenAI Whisper converts your voice to text accurately across all 3 languages.</div>
-        </div>
-        <div class="tech-card">
-          <div class="tech-icon">🤖</div>
-          <div class="tech-name">Groq LLaMA 3.3</div>
-          <div class="tech-desc">Ultra-fast LLaMA 3.3 70B model via Groq API generates intelligent responses.</div>
-        </div>
-        <div class="tech-card">
-          <div class="tech-icon">🔊</div>
-          <div class="tech-name">gTTS</div>
-          <div class="tech-desc">Google Text-to-Speech converts AI responses back to natural voice audio.</div>
-        </div>
-        <div class="tech-card">
-          <div class="tech-icon">🐍</div>
-          <div class="tech-name">Flask Backend</div>
-          <div class="tech-desc">Python Flask handles all API routes, audio processing, and serves the frontend.</div>
-        </div>
+        <div class="tech-card"><div class="tech-icon">🎙️</div><div class="tech-name">Whisper STT</div><div class="tech-desc">Groq's whisper-large-v3 converts your voice to text with forced language detection.</div></div>
+        <div class="tech-card"><div class="tech-icon">🤖</div><div class="tech-name">Groq LLaMA 3.3</div><div class="tech-desc">Ultra-fast LLaMA 3.3 70B model generates intelligent responses via Groq API.</div></div>
+        <div class="tech-card"><div class="tech-icon">🔊</div><div class="tech-name">gTTS</div><div class="tech-desc">Google Text-to-Speech converts AI responses to natural voice audio.</div></div>
+        <div class="tech-card"><div class="tech-icon">🐍</div><div class="tech-name">Flask Backend</div><div class="tech-desc">Python Flask handles all API routes, audio processing, and serves the frontend.</div></div>
       </div>
 
       <div class="help-section-title">Common Issues</div>
       <div class="faq-list">
-        <div class="faq-item">
-          <div class="faq-q">❌ Microphone not working?</div>
-          <div class="faq-a">Check browser permissions. Go to browser Settings → Privacy → Microphone and allow this site.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">❌ 500 Server Error?</div>
-          <div class="faq-a">Make sure the Flask server is running: <code>cd backend && python app.py</code>. Also verify your <code>.env</code> has a valid GROQ_API_KEY.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">❌ No voice output?</div>
-          <div class="faq-a">gTTS requires an internet connection. Check your network. Also ensure your system volume is not muted.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">❌ Whisper not transcribing?</div>
-          <div class="faq-a">Ensure <code>ffmpeg</code> is installed and added to your system PATH. Run <code>ffmpeg -version</code> to verify.</div>
-        </div>
+        <div class="faq-item"><div class="faq-q">❌ Microphone not working?</div><div class="faq-a">Go to browser Settings → Privacy → Microphone and allow this site.</div></div>
+        <div class="faq-item"><div class="faq-q">❌ 500 Server Error?</div><div class="faq-a">Make sure Flask is running: <code>cd backend && python app.py</code>. Check your <code>.env</code> has a valid GROQ_API_KEY.</div></div>
+        <div class="faq-item"><div class="faq-q">❌ No voice output?</div><div class="faq-a">gTTS needs internet. Check your network and ensure system volume is not muted.</div></div>
+        <div class="faq-item"><div class="faq-q">❌ Recording stops too fast?</div><div class="faq-a">Speak louder or closer to the mic. The silence threshold is set to detect low volume as silence.</div></div>
+        <div class="faq-item"><div class="faq-q">❌ Wrong language transcribed?</div><div class="faq-a">Each chat page forces its own language. Make sure you opened the correct language page from the sidebar.</div></div>
       </div>
-
     </div>
   </main>
 </div>
-<script>
-function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); }
-</script>
+<script src="script.js"></script>
 </body>
 </html>

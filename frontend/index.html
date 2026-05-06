@@ -7,64 +7,52 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="app-shell">
-
-  <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-logo">
       <div class="logo-icon">🎤</div>
       <span class="logo-text">VoiceAI</span>
     </div>
-
     <nav class="sidebar-nav">
       <div class="nav-section-label">Languages</div>
-      <a href="english.html" class="nav-item" id="nav-english">
-        <span class="nav-icon">🇬🇧</span>
-        <span class="nav-label">English</span>
-        <span class="nav-tag">EN</span>
+      <a href="english.html" class="nav-item">
+        <span class="nav-icon">🇬🇧</span><span class="nav-label">English</span><span class="nav-tag">EN</span>
       </a>
-      <a href="tamil.html" class="nav-item" id="nav-tamil">
-        <span class="nav-icon">🇮🇳</span>
-        <span class="nav-label">Tamil</span>
-        <span class="nav-tag">TA</span>
+      <a href="tamil.html" class="nav-item">
+        <span class="nav-icon">🇮🇳</span><span class="nav-label">Tamil</span><span class="nav-tag">TA</span>
       </a>
-      <a href="hindi.html" class="nav-item" id="nav-hindi">
-        <span class="nav-icon">🇮🇳</span>
-        <span class="nav-label">Hindi</span>
-        <span class="nav-tag">HI</span>
+      <a href="hindi.html" class="nav-item">
+        <span class="nav-icon">🇮🇳</span><span class="nav-label">Hindi</span><span class="nav-tag">HI</span>
       </a>
-
       <div class="nav-divider"></div>
-      <div class="nav-section-label">Support</div>
-      <a href="help.html" class="nav-item" id="nav-help">
-        <span class="nav-icon">❓</span>
-        <span class="nav-label">Help & Guide</span>
+      <div class="nav-section-label">More</div>
+      <a href="plans.html" class="nav-item">
+        <span class="nav-icon">💎</span><span class="nav-label">Plans & Pricing</span>
+      </a>
+      <a href="help.html" class="nav-item">
+        <span class="nav-icon">❓</span><span class="nav-label">Help & Guide</span>
+      </a>
+      <a href="contact.html" class="nav-item">
+        <span class="nav-icon">📞</span><span class="nav-label">Contact Us</span>
       </a>
     </nav>
-
     <div class="sidebar-footer">
-      <div class="status-dot"></div>
-      <span>AI Server Online</span>
+      <div class="status-dot"></div><span>AI Server Online</span>
     </div>
   </aside>
 
-  <!-- MAIN CONTENT -->
   <main class="main-content">
-    <!-- Top bar -->
     <header class="topbar">
-      <button class="hamburger" onclick="toggleSidebar()">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="hamburger" onclick="toggleSidebar()"><span></span><span></span><span></span></button>
       <h1 class="page-title">Welcome to VoiceAI</h1>
+      <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle theme">🌙</button>
     </header>
 
-    <!-- Home / Language Selection -->
     <div class="home-content">
       <div class="hero">
         <div class="hero-icon">🎤</div>
         <h2>Multilingual Voice Chatbot</h2>
-        <p>Speak naturally in your language. AI understands and responds in the same language with voice output.</p>
+        <p>Speak naturally in your language. AI understands and responds with voice output.</p>
       </div>
 
       <div class="lang-cards-grid">
@@ -72,7 +60,7 @@
           <div class="card-flag">🇬🇧</div>
           <div class="card-body">
             <h3>English</h3>
-            <p>Chat with AI in English. Natural conversation with voice input and output.</p>
+            <p>Voice + keyboard input. Natural conversation with AI voice responses.</p>
           </div>
           <div class="card-arrow">→</div>
         </a>
@@ -98,16 +86,11 @@
         <div class="info-item"><span class="info-icon">🎙️</span><span>Whisper STT</span></div>
         <div class="info-item"><span class="info-icon">🤖</span><span>Groq LLaMA 3.3</span></div>
         <div class="info-item"><span class="info-icon">🔊</span><span>gTTS Voice Output</span></div>
-        <div class="info-item"><span class="info-icon">⚡</span><span>Fast Response</span></div>
+        <div class="info-item"><span class="info-icon">⚡</span><span>Auto Silence Detection</span></div>
       </div>
     </div>
   </main>
 </div>
-
-<script>
-function toggleSidebar() {
-  document.getElementById('sidebar').classList.toggle('open');
-}
-</script>
+<script src="script.js"></script>
 </body>
 </html>

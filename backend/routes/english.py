@@ -22,3 +22,18 @@ def english():
         return jsonify({"user": user_text, "bot": response_text, "audio": audio_b64})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+@english_bp.route("/english/text", methods=["POST"])
+def english_text():
+    try:
+        data = request.get_json()
+        user_text = data.get("text", "").strip()
+        if not user_text:
+            return jsonify({"error": "No text provided"}), 400
+        response_text = get_response(user_text, "You are a helpful assistant. Always reply in English only.")
+        audio_file = generate_voice(response_text, "en")
+        with open(audio_file, "rb") as f:
+            audio_b64 = base64.b64encode(f.read()).decode("utf-8")
+        return jsonify({"bot": response_text, "audio": audio_b64})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
