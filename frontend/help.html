@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help & Guide — VoiceAI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">🎤</div>
+      <span class="logo-text">VoiceAI</span>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Languages</div>
+      <a href="english.html" class="nav-item">
+        <span class="nav-icon">🇬🇧</span>
+        <span class="nav-label">English</span>
+        <span class="nav-tag">EN</span>
+      </a>
+      <a href="tamil.html" class="nav-item">
+        <span class="nav-icon">🇮🇳</span>
+        <span class="nav-label">Tamil</span>
+        <span class="nav-tag">TA</span>
+      </a>
+      <a href="hindi.html" class="nav-item">
+        <span class="nav-icon">🇮🇳</span>
+        <span class="nav-label">Hindi</span>
+        <span class="nav-tag">HI</span>
+      </a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Support</div>
+      <a href="help.html" class="nav-item active">
+        <span class="nav-icon">❓</span>
+        <span class="nav-label">Help & Guide</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="status-dot"></div>
+      <span>AI Server Online</span>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <button class="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+      <h1 class="page-title">Help & Guide</h1>
+    </header>
+
+    <div class="help-content">
+
+      <div class="help-hero">
+        <div class="help-hero-icon">📖</div>
+        <h2>How to use VoiceAI</h2>
+        <p>Everything you need to get started with the multilingual voice chatbot.</p>
+      </div>
+
+      <div class="help-steps">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Choose a Language</h4>
+            <p>Select English, Tamil, or Hindi from the sidebar on the left to open that language's chat page.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Allow Microphone</h4>
+            <p>When prompted by your browser, click <strong>Allow</strong> to grant microphone access. This is required for voice input.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>Click the Mic Button</h4>
+            <p>Press the blue microphone button. It will turn red and start recording for <strong>4 seconds</strong>. Speak clearly during this time.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4>Wait for AI Response</h4>
+            <p>After recording, the AI processes your speech and replies in text and voice automatically. The response plays in your selected language.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="help-section-title">Tech Stack</div>
+      <div class="tech-grid">
+        <div class="tech-card">
+          <div class="tech-icon">🎙️</div>
+          <div class="tech-name">Whisper STT</div>
+          <div class="tech-desc">OpenAI Whisper converts your voice to text accurately across all 3 languages.</div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">🤖</div>
+          <div class="tech-name">Groq LLaMA 3.3</div>
+          <div class="tech-desc">Ultra-fast LLaMA 3.3 70B model via Groq API generates intelligent responses.</div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">🔊</div>
+          <div class="tech-name">gTTS</div>
+          <div class="tech-desc">Google Text-to-Speech converts AI responses back to natural voice audio.</div>
+        </div>
+        <div class="tech-card">
+          <div class="tech-icon">🐍</div>
+          <div class="tech-name">Flask Backend</div>
+          <div class="tech-desc">Python Flask handles all API routes, audio processing, and serves the frontend.</div>
+        </div>
+      </div>
+
+      <div class="help-section-title">Common Issues</div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-q">❌ Microphone not working?</div>
+          <div class="faq-a">Check browser permissions. Go to browser Settings → Privacy → Microphone and allow this site.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">❌ 500 Server Error?</div>
+          <div class="faq-a">Make sure the Flask server is running: <code>cd backend && python app.py</code>. Also verify your <code>.env</code> has a valid GROQ_API_KEY.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">❌ No voice output?</div>
+          <div class="faq-a">gTTS requires an internet connection. Check your network. Also ensure your system volume is not muted.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">❌ Whisper not transcribing?</div>
+          <div class="faq-a">Ensure <code>ffmpeg</code> is installed and added to your system PATH. Run <code>ffmpeg -version</code> to verify.</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+<script>
+function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); }
+</script>
+</body>
+</html>

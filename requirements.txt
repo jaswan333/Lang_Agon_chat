@@ -1,0 +1,6 @@
+flask
+groq
+openai-whisper
+gtts
+pydub
+python-dotenv

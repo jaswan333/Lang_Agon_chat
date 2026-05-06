@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VoiceAI — Multilingual Chatbot</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">🎤</div>
+      <span class="logo-text">VoiceAI</span>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Languages</div>
+      <a href="english.html" class="nav-item" id="nav-english">
+        <span class="nav-icon">🇬🇧</span>
+        <span class="nav-label">English</span>
+        <span class="nav-tag">EN</span>
+      </a>
+      <a href="tamil.html" class="nav-item" id="nav-tamil">
+        <span class="nav-icon">🇮🇳</span>
+        <span class="nav-label">Tamil</span>
+        <span class="nav-tag">TA</span>
+      </a>
+      <a href="hindi.html" class="nav-item" id="nav-hindi">
+        <span class="nav-icon">🇮🇳</span>
+        <span class="nav-label">Hindi</span>
+        <span class="nav-tag">HI</span>
+      </a>
+
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Support</div>
+      <a href="help.html" class="nav-item" id="nav-help">
+        <span class="nav-icon">❓</span>
+        <span class="nav-label">Help & Guide</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="status-dot"></div>
+      <span>AI Server Online</span>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- Top bar -->
+    <header class="topbar">
+      <button class="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+      <h1 class="page-title">Welcome to VoiceAI</h1>
+    </header>
+
+    <!-- Home / Language Selection -->
+    <div class="home-content">
+      <div class="hero">
+        <div class="hero-icon">🎤</div>
+        <h2>Multilingual Voice Chatbot</h2>
+        <p>Speak naturally in your language. AI understands and responds in the same language with voice output.</p>
+      </div>
+
+      <div class="lang-cards-grid">
+        <a href="english.html" class="feature-card">
+          <div class="card-flag">🇬🇧</div>
+          <div class="card-body">
+            <h3>English</h3>
+            <p>Chat with AI in English. Natural conversation with voice input and output.</p>
+          </div>
+          <div class="card-arrow">→</div>
+        </a>
+        <a href="tamil.html" class="feature-card">
+          <div class="card-flag">🇮🇳</div>
+          <div class="card-body">
+            <h3>Tamil — தமிழ்</h3>
+            <p>தமிழில் AI உடன் பேசுங்கள். குரல் உள்ளீடு மற்றும் வெளியீடு.</p>
+          </div>
+          <div class="card-arrow">→</div>
+        </a>
+        <a href="hindi.html" class="feature-card">
+          <div class="card-flag">🇮🇳</div>
+          <div class="card-body">
+            <h3>Hindi — हिंदी</h3>
+            <p>हिंदी में AI से बात करें। वॉयस इनपुट और आउटपुट के साथ।</p>
+          </div>
+          <div class="card-arrow">→</div>
+        </a>
+      </div>
+
+      <div class="info-strip">
+        <div class="info-item"><span class="info-icon">🎙️</span><span>Whisper STT</span></div>
+        <div class="info-item"><span class="info-icon">🤖</span><span>Groq LLaMA 3.3</span></div>
+        <div class="info-item"><span class="info-icon">🔊</span><span>gTTS Voice Output</span></div>
+        <div class="info-item"><span class="info-icon">⚡</span><span>Fast Response</span></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hindi Chat — VoiceAI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon">🎤</div>
+      <span class="logo-text">VoiceAI</span>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">Languages</div>
+      <a href="english.html" class="nav-item">
+        <span class="nav-icon">🇬🇧</span>
+        <span class="nav-label">English</span>
+        <span class="nav-tag">EN</span>
+      </a>
+      <a href="tamil.html" class="nav-item">
+        <span class="nav-icon">🇮🇳</span>
+        <span class="nav-label">Tamil</span>
+        <span class="nav-tag">TA</span>
+      </a>
+      <a href="hindi.html" class="nav-item active">
+        <span class="nav-icon">🇮🇳</span>
+        <span class="nav-label">Hindi</span>
+        <span class="nav-tag">HI</span>
+      </a>
+      <div class="nav-divider"></div>
+      <div class="nav-section-label">Support</div>
+      <a href="help.html" class="nav-item">
+        <span class="nav-icon">❓</span>
+        <span class="nav-label">Help & Guide</span>
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="status-dot"></div>
+      <span>AI Server Online</span>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <button class="hamburger" onclick="toggleSidebar()">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="topbar-info">
+        <div class="topbar-avatar">🤖</div>
+        <div>
+          <div class="topbar-title">हिंदी AI सहायक</div>
+          <div class="topbar-status" id="botStatus">
+            <span class="status-dot-sm"></span> Online
+          </div>
+        </div>
+      </div>
+      <span class="lang-badge">🇮🇳 हिंदी</span>
+    </header>
+
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg bot-msg">
+        <div class="msg-avatar">🤖</div>
+        <div class="msg-content">
+          <div class="msg-name">AI सहायक</div>
+          <div class="bubble">नमस्ते! मैं आपका हिंदी वॉयस असिस्टेंट हूँ। नीचे माइक बटन दबाएं और बोलें — मैं हिंदी में जवाब दूंगा! 🎤</div>
+          <div class="msg-time" id="welcomeTime"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <div class="input-bar">
+        <div class="record-status" id="recordHint">
+          <span id="hintText">माइक दबाएं और बोलें (4 सेकंड)</span>
+        </div>
+        <div class="mic-wrapper">
+          <div class="mic-ring" id="micRing"></div>
+          <button class="mic-btn" id="micBtn" onclick="startRecording('hindi')" title="बोलें">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.91-3c-.49 0-.9.36-.98.85C16.52 14.2 14.47 16 12 16s-4.52-1.8-4.93-4.15c-.08-.49-.49-.85-.98-.85-.61 0-1.09.54-1 1.14.49 3 2.89 5.35 5.91 5.78V20c0 .55.45 1 1 1s1-.45 1-1v-2.08c3.02-.43 5.42-2.78 5.91-5.78.1-.6-.39-1.14-1-1.14z"/></svg>
+          </button>
+        </div>
+        <div class="timer-bar" id="timerBar"><div class="timer-fill" id="timerFill"></div></div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="script.js"></script>
+<script>
+  document.getElementById('welcomeTime').textContent = new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+  function toggleSidebar() { document.getElementById('sidebar').classList.toggle('open'); }
+</script>
+</body>
+</html>
