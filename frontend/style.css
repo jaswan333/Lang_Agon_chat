@@ -560,6 +560,19 @@ body {
   margin-top: 4px;
 }
 
+/* Emotion tag */
+.emotion-tag {
+  font-size: 11px;
+  color: var(--grey-500);
+  padding: 3px 8px;
+  background: var(--grey-50);
+  border: 1px solid var(--grey-200);
+  border-radius: 12px;
+  margin-top: 4px;
+  display: inline-block;
+  font-weight: 500;
+}
+
 .input-bar {
   display: flex;
   flex-direction: column;

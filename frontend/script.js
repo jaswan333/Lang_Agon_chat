@@ -173,8 +173,13 @@ async function startRecording(lang) {
             } else if (data) {
                 const userText = data.user || '(voice input)';
                 const botText  = data.bot  || '(no response)';
+                const emotionData = {
+                    emotion: data.emotion || 'neutral',
+                    emoji: data.emoji || '🙂',
+                    color: data.color || '#3b82f6'
+                };
                 appendMessage('user', userText, null, lang);
-                appendMessage('bot',  botText, userText, lang);   // pass transcription to bot bubble
+                appendMessage('bot',  botText, userText, lang, emotionData);   // pass emotion data
                 if (data.audio) playAudio(data.audio);            // core voice output unchanged
             }
         } catch {
@@ -214,7 +219,12 @@ async function sendTextInput(lang) {
         if (!res.ok || (data && data.error)) {
             showError('Error: ' + (data?.error || `Server error ${res.status}`));
         } else if (data) {
-            appendMessage('bot', data.bot || '(no response)', null, lang);
+            const emotionData = {
+                emotion: data.emotion || 'neutral',
+                emoji: data.emoji || '🙂',
+                color: data.color || '#3b82f6'
+            };
+            appendMessage('bot', data.bot || '(no response)', null, lang, emotionData);
             if (data.audio) playAudio(data.audio);
         }
     } catch {
@@ -254,8 +264,8 @@ function clearWaveform(canvas) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-// ── Append Message ────────────────────────────────────
-function appendMessage(role, text, transcription, lang) {
+// ── Append Message with Emotion Display ────────────────────────────────────
+function appendMessage(role, text, transcription, lang, emotionData) {
     const container = document.getElementById('chatMessages');
     const isUser    = role === 'user';
 
@@ -281,6 +291,14 @@ function appendMessage(role, text, transcription, lang) {
 
     content.appendChild(name);
     content.appendChild(bubble);
+
+    // ── Emotion indicator for bot messages ──
+    if (!isUser && emotionData) {
+        const emotionTag = document.createElement('div');
+        emotionTag.className = 'emotion-tag';
+        emotionTag.innerHTML = `${emotionData.emoji} <span style="color: ${emotionData.color}; font-weight: 600;">${emotionData.emotion}</span>`;
+        content.appendChild(emotionTag);
+    }
 
     // ── Response confidence: show transcription under bot bubble ──
     if (!isUser && transcription) {
